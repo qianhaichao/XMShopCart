@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMCartSectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfp-St-uoX">
+                    <rect key="frame" x="10" y="0.0" width="285" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="店铺名称" image="icon_orderpay_normal">
+                        <color key="titleColor" red="0.42745098040000001" green="0.43529411759999997" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" image="icon_orderpay_selected"/>
+                    <connections>
+                        <action selector="chooseShopBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="T4c-CX-kwg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osI-xa-NTZ">
+                    <rect key="frame" x="315" y="0.0" width="50" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Mfv-yj-skc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="编辑">
+                        <color key="titleColor" red="0.42745098040000001" green="0.43529411759999997" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="完成"/>
+                    <connections>
+                        <action selector="editShopBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tAc-zb-fcM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="osI-xa-NTZ" secondAttribute="bottom" id="3dg-Ax-YxF"/>
+                <constraint firstItem="osI-xa-NTZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Be-x8-NGS"/>
+                <constraint firstItem="Nfp-St-uoX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="JQL-jG-DuI"/>
+                <constraint firstItem="osI-xa-NTZ" firstAttribute="leading" secondItem="Nfp-St-uoX" secondAttribute="trailing" constant="20" id="Mev-YH-ZyW"/>
+                <constraint firstItem="Nfp-St-uoX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U2v-IM-1IP"/>
+                <constraint firstAttribute="bottom" secondItem="Nfp-St-uoX" secondAttribute="bottom" id="uLj-IF-8tu"/>
+                <constraint firstAttribute="trailing" secondItem="osI-xa-NTZ" secondAttribute="trailing" constant="10" id="yhM-dv-eeh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="editBtn" destination="osI-xa-NTZ" id="CBS-Qa-gtx"/>
+                <outlet property="shopTitleBtn" destination="Nfp-St-uoX" id="JvL-0q-6vi"/>
+            </connections>
+            <point key="canvasLocation" x="12.5" y="-88.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_orderpay_normal" width="20" height="20"/>
+        <image name="icon_orderpay_selected" width="20" height="20"/>
+    </resources>
+</document>

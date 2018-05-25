@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMCartBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gm-F2-WWl">
+                    <rect key="frame" x="10" y="0.0" width="110" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="B0B-4a-ajg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="全选" image="icon_orderpay_normal">
+                        <color key="titleColor" red="0.42745098040000001" green="0.43529411759999997" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="全选" image="icon_orderpay_selected"/>
+                    <connections>
+                        <action selector="chooseAllBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="L2E-UX-jdk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYb-1Z-ofw">
+                    <rect key="frame" x="255" y="0.0" width="120" height="46"/>
+                    <color key="backgroundColor" red="1" green="0.48380730259999999" blue="0.06340470409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="mHf-K0-Smt"/>
+                    </constraints>
+                    <state key="normal" title="结算">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="settleBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="icL-78-tMc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-Ay-mCS">
+                    <rect key="frame" x="120" y="0.0" width="135" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.99874621630000004" green="0.31330403690000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4gm-F2-WWl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6Bn-4M-4p0"/>
+                <constraint firstAttribute="bottom" secondItem="YBz-Ay-mCS" secondAttribute="bottom" id="Cab-fC-5Jm"/>
+                <constraint firstItem="YBz-Ay-mCS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FdC-CB-cbH"/>
+                <constraint firstAttribute="bottom" secondItem="4gm-F2-WWl" secondAttribute="bottom" constant="-1" id="GTw-rQ-f5m"/>
+                <constraint firstAttribute="bottom" secondItem="hYb-1Z-ofw" secondAttribute="bottom" id="Khf-bU-u8N"/>
+                <constraint firstItem="hYb-1Z-ofw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W25-WS-2fW"/>
+                <constraint firstItem="4gm-F2-WWl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="XzE-CT-LEz"/>
+                <constraint firstItem="hYb-1Z-ofw" firstAttribute="leading" secondItem="YBz-Ay-mCS" secondAttribute="trailing" id="hFV-x5-ZX5"/>
+                <constraint firstAttribute="trailing" secondItem="hYb-1Z-ofw" secondAttribute="trailing" id="kJJ-wH-vEk"/>
+                <constraint firstItem="YBz-Ay-mCS" firstAttribute="leading" secondItem="4gm-F2-WWl" secondAttribute="trailing" id="kal-R3-9M6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allChooseBtn" destination="4gm-F2-WWl" id="CyX-iq-35S"/>
+                <outlet property="settleBtn" destination="hYb-1Z-ofw" id="4g8-36-Ckf"/>
+                <outlet property="totalLbl" destination="YBz-Ay-mCS" id="M9Z-jx-jXV"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="363"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_orderpay_normal" width="20" height="20"/>
+        <image name="icon_orderpay_selected" width="20" height="20"/>
+    </resources>
+</document>
